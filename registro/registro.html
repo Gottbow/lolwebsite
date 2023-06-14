@@ -1,0 +1,49 @@
+<section id="asistentes" class="padded">
+    <div class="container">
+        <h2>Proveedores</h2>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Ordenar por</label>
+            <select class="form-control" id="cbocampo">
+              <option value="idproveedor">Código</option>
+              <option value="nombreempresa">Empresa</option>
+              <option value="nombrecontacto">Contacto</option>
+              <option value="pais">Pais</option>
+              <option value="ciudad">Ciudad</option>
+              
+            </select>
+          </div>
+
+        <label for="txtBuscar">Buscar empresa</label>
+        <div class="form-row form-group">
+            <div class="col-10">
+                <input type="text" class="form-control" id="txtBuscar" placeholder="Escriba lo que va a buscar">
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-primary btn-block" id="btnBuscar">Buscar</button>
+            </div>
+        </div>
+        
+
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th>Cod</th>
+                <th>Empresa</th>
+                <th>Contacto</th>
+                <th>Cargo</th>
+                <th>Pais</th>
+                <th>Ciudad</th>
+                <th>Dirección</th>
+              </tr>
+            </thead>
+            <tbody id="tbody-proveedores">
+              
+            </tbody>
+        </table>
+    </div><!-- container -->
+</section><!-- proveedores -->
+<script>
+    var url = "proveedores/proveedores.js";
+    $.getScript(url);
+</script>        
